@@ -52,7 +52,7 @@ app.post(
 
   console.log(messageContent);
   const accountSid = "AC4d6e3c697bc85e708bfaf804e38d2505";
-  const authToken = "2a424dcd5733d8f806461b03fb673229";
+  const authToken = "7340767a827a5a7557b0bbd9f9f83895";
   const client = require("twilio")(accountSid, authToken);
   client.messages
     .create({ body: messageContent, from: "+14065085750", to: "+919361784871" })
