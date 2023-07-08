@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naren Physiotherapy</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/Naren.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><a href="#">Naren Physio</a></div>
+        <ul class="links">
+          <li><a class="nav-items" href="home">Home</a></li>
+          <li><a class="nav-items" href="service">Service</a></li>
+          <li><a class="nav-items" href="About">About</a></li>
+        </ul>
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="drop-menu">
+        <li><a class="nav-items" href="home">Home</a></li>
+        <li><a class="nav-items" href="service">Service</a></li>
+        <li><a class="nav-items" href="About">About</a></li>
+      </div>
+    </header>
+    <div class="mobile">
+      <div class="main">
+        <div class="form">
+          <form action="/send-message" method="post">
+            <h2>Book An Appointment</h2>
+            <label for="Name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              size="20"
+              style="margin-left: 30px"
+              required
+            />
+            <br />
+            <br />
+            <label for="Age">Age:</label>
+            <input
+              type=""
+              id="age"
+              name="Age"
+              
+              style="margin-left: 45.5px"
+              required
+            />
+            <br />
+            <br />
+            <label for="Mobile">Mobile: </label>
+            <input
+              type=""
+              name="Mobile"
+              id="mobile"
+              size="20"
+              maxlength="10"
+              style="margin-left: 20px"
+              required
+            />
+            <br />
+            <br />
+            <label for="Reason">Reason: </label>
+            <input
+              type="text"
+              name="reason"
+              size="20"
+              
+              maxlength="10"
+              style="margin-left: 20px"
+              required
+            />
+            <br />
+            <br />
+
+            <label for="Gender"> Gender:</label>
+            <input
+              class="gender"
+              type="radio"
+              name="gender"
+              id="gender"
+              value="Male"
+              required
+            />
+            <label for="gender" style="color: rgb(29, 27, 27)">Male</label>
+            <input
+              class="gender"
+              type="radio"
+              name="gender"
+              id="gender"
+              value="Female"
+            />
+            <label for="gender" style="color: rgb(29, 27, 27)"> Female</label>
+            <br />
+            <br />
+
+            <button
+              class="apb-btn"
+              type="submit"
+              value="Send message"
+              style="margin-left: 50px"
+            >
+              Book Appointment
+            </button>
+          </form>
+        </div>
+        <div class="image">
+          <img
+            src="/images/Light blue Modern Physiotherapy Photo Collage.png"
+            alt=""
+            height="370px"
+          />
+        </div>
+      </div>
+      <div class="contents">
+        <div class="treat"><h2>We Treat For</h2></div>
+        <div class="con-items">
+          <h4>Strength & Conditioning</h4>
+          <h4>Stroke</h4>
+          <h4>Facial Plasy</h4>
+          <h4>Muscle Pain</h4>
+          <h4>Spinal Cord Injuries</h4>
+          <h4>Jonit Pain</h4>
+          <h4>Back Pain</h4>
+          <h4>Hip Pain</h4>
+        </div>
+      </div>
+      <div class="special">
+        <div class="special-h2"><h2>We Specialized For</h2></div>
+        <div class="sp-items">
+          <h4>Improving Sports Performance</h4>
+          <h4>Sports Injury & Management</h4>
+        </div>
+      </div>
+      <div class="special-h2"><h2>Contact Us</h2></div>
+      <div class="footer">
+        <div class="links">
+          <a href="https://wa.me/qr/SZCTEQ4NIDVHH1"
+            ><i class="fa-brands fa-whatsapp" style="color: #5e6260"></i
+          ></a>
+          <a href="mailto:dtamilselvan1004@gail.com"
+            ><i class="fa-solid fa-envelope" style="color:#5e6260 "></i
+          ></a>
+        </div>
+        <div class="map">
+          <p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d550.4892240057476!2d77.26090198445256!3d11.50499925264416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba92122724b1df5%3A0x76495d57b44f2b9f!2sPhysiotherapy!5e0!3m2!1sen!2sin!4v1688149997186!5m2!1sen!2sin"
+              
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const togMenu = document.querySelector(".toggle");
+      const togMenuIcon = document.querySelector(".toggle i");
+      const dropMenu = document.querySelector(".drop-menu");
+      togMenu.onclick = function () {
+        dropMenu.classList.toggle("open");
+        const isOpen = dropMenu.classList.contains("open");
+        togMenuIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
