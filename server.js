@@ -6,7 +6,15 @@ const mongoose =require("mongoose")
 
 let path = require("path");
 const app = express();
-const User = require("./models/user") 
+const  userSchema = new mongoose.Schema({
+    name: String,
+    Age: Number,
+    Mobile: Number,
+    reason: String,
+    gender: String
+})
+
+const User =mongoose.model('User', userSchema)
 
 
 const {check ,validationResult}= require('express-validator')
